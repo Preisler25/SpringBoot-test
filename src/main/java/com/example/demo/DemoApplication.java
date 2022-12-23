@@ -21,4 +21,14 @@ public class DemoApplication {
 	public String getNumForSubtracting(@RequestParam String num1, @RequestParam String num2){
 		return "A két szám különbsége " + (Integer.parseInt(num1) - Integer.parseInt(num2)) ;
 	}
+	@GetMapping("/api/math/multiply")
+	@ResponseBody
+	public String getNumForMultiplying(@RequestParam String num1, @RequestParam String num2){
+		return "A két szám szorzata " + (Integer.parseInt(num1) * Integer.parseInt(num2)) ;
+	}
+	@GetMapping("/api/math/divide")
+	@ResponseBody
+	public String getNumForDividing(@RequestParam String num1, @RequestParam String num2){
+		return "A Számok hányadosa " + (Integer.parseInt(num1) / Integer.parseInt(num2)) ;
+	}
 }
