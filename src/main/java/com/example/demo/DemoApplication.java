@@ -1,12 +1,14 @@
 package com.example.demo;
 
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 
 @SpringBootApplication
-@RestController
+@Controller
 public class DemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
@@ -30,5 +32,9 @@ public class DemoApplication {
 	@ResponseBody
 	public String getNumForDividing(@RequestParam String num1, @RequestParam String num2){
 		return "A Számok hányadosa " + (Integer.parseInt(num1) / Integer.parseInt(num2)) ;
+	}
+	@RequestMapping("/templates")
+	public String welcome() {
+		return "index";
 	}
 }
