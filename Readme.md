@@ -1,3 +1,7 @@
-Query:
+QueryForAddingNums:
 
-    localhost:8080/api/addup?num1=10&num2=10
+    http://localhost:8080/api/math/add?num1=10&num2=10
+
+QueryForSubtractingNums:
+
+    http://localhost:8080/api/math/subtracts?num1=10&num2=10

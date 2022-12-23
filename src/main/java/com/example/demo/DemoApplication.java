@@ -11,9 +11,14 @@ public class DemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
-	@GetMapping("/api/addup")
+	@GetMapping("/api/math/add")
 	@ResponseBody
-	public String getFood(@RequestParam String num1, @RequestParam String num2){
+	public String getNumForAdding(@RequestParam String num1, @RequestParam String num2){
 		return "A két szám összege " + (Integer.parseInt(num1) + Integer.parseInt(num2)) ;
+	}
+	@GetMapping("/api/math/subtracts")
+	@ResponseBody
+	public String getNumForSubtracting(@RequestParam String num1, @RequestParam String num2){
+		return "A két szám különbsége " + (Integer.parseInt(num1) - Integer.parseInt(num2)) ;
 	}
 }
