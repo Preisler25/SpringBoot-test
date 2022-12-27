@@ -3,7 +3,7 @@ package com.example.demo.op;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="operations")
+@Table(name="operationshistory")
 public class Operations {
     @Id
     private long id;

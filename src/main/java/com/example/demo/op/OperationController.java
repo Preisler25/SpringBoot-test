@@ -25,7 +25,7 @@ public class OperationController {
     }
 
     @RequestMapping(method = RequestMethod.POST, value="/op")
-    public void create(@PathVariable Operations operations){
+    public void create(@RequestBody Operations operations){
         operationService.createOperation(operations);
     }
 
