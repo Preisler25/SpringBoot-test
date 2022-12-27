@@ -14,7 +14,6 @@ public class OperationController {
     @Autowired
     private OperationService operationService;
 
-
     @RequestMapping("/op")
     public List<Operations> getAll(){
         return operationService.getAllOp();
