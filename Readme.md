@@ -4,4 +4,3 @@
 ---
 >It is using basic string query to send data with HTTP GET
 ---
----
