@@ -3,18 +3,9 @@ package com.example.demo.op;
 import jakarta.persistence.*;
 
 @Entity
-@Table
+@Table(name="operations")
 public class Operations {
     @Id
-    @SequenceGenerator(
-            name = "operation_sequence",
-            sequenceName = "operation_sequence",
-            allocationSize = 1
-    )
-    @GeneratedValue(
-            strategy = GenerationType.SEQUENCE,
-            generator = "operation_sequence"
-    )
     private long id;
 
     private int num1;
