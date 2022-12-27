@@ -1,11 +1,13 @@
 package com.example.demo.op;
 
+
 import jakarta.persistence.*;
 
 @Entity
 @Table(name="operationshistory")
-public class Operations {
+public class Operations{
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     private int num1;
@@ -17,6 +19,12 @@ public class Operations {
     }
     public Operations(long id, int num1, int num2, String operator) {
         this.id = id;
+        this.num1 = num1;
+        this.num2 = num2;
+        this.operator = operator;
+    }
+
+    public Operations(int num1, int num2, String operator) {
         this.num1 = num1;
         this.num2 = num2;
         this.operator = operator;
