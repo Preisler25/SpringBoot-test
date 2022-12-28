@@ -39,12 +39,16 @@ public class MathController {
         switch (operations.getOperator()) {
             case "add":
                 System.out.println("A Számok összege " + (operations.getNum1() + operations.getNum2()));
+                break;
             case "sub":
                 System.out.println("A Számok különbsége " + (operations.getNum1() - operations.getNum2()));
+                break;
             case "mul":
                 System.out.println("A Számok szorzata " + (operations.getNum1() * operations.getNum2()));
+                break;
             case "div":
                 System.out.println("A Számok hányadosa " + (operations.getNum1()) / operations.getNum2());
+                break;
         }
     }
     private String getData(String data, int id) {
