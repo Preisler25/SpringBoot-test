@@ -1,9 +1,11 @@
 package com.example.demo.op;
 
 
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class MathController {
@@ -16,28 +18,38 @@ public class MathController {
     }
 
     @RequestMapping(method = RequestMethod.POST, value="/math")
-    public void doMath(@RequestBody String temp) {
-        String[] arrOfStr = temp.split("&", 3);
-        int num1 = Integer.parseInt(arrOfStr[0].split("=")[1]);
-        int num2 = Integer.parseInt(arrOfStr[1].split("=")[1]);
-        String op = arrOfStr[2].split("=")[1];
-        switch (op) {
+    public String doMath(@RequestBody String temp, HttpServletResponse response) {
+
+        //converting data to string
+        int num1 = Integer.parseInt(getData(temp, 0));
+        int num2 = Integer.parseInt(getData(temp, 1));
+        String op = getData(temp, 2);
+
+        //Saving to database
+        save(new Operations(num1, num2, op));
+
+        //Redirecting the user to the /math page
+        response.setStatus(HttpServletResponse.SC_MOVED_PERMANENTLY);
+        response.setHeader("Location", "/math");
+        return "redirect:/math";
+    }
+
+    private void save(Operations operations) {
+        opRepository.save(operations);
+        switch (operations.getOperator()) {
             case "add":
-                System.out.println("A Számok összege " + (num1 + num2));
-                opRepository.save(new Operations(num1, num2, op));
-                break;
+                System.out.println("A Számok összege " + (operations.getNum1() + operations.getNum2()));
             case "sub":
-                System.out.println("A Számok különbsége " + (num1 - num2));
-                opRepository.save(new Operations(num1, num2, op));
-                break;
+                System.out.println("A Számok különbsége " + (operations.getNum1() - operations.getNum2()));
             case "mul":
-                System.out.println("A Számok szorzata " + (num1 * num2));
-                opRepository.save(new Operations(num1, num2, op));
-                break;
+                System.out.println("A Számok szorzata " + (operations.getNum1() * operations.getNum2()));
             case "div":
-                System.out.println("A Számok hányadosa " + (num1) / num2);
-                opRepository.save(new Operations(num1, num2, op));
-                break;
+                System.out.println("A Számok hányadosa " + (operations.getNum1()) / operations.getNum2());
         }
     }
+    private String getData(String data, int id) {
+        return data.split("&")[id].split("=")[1];
+    }
+
 }
+
