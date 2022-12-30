@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Alma</title>
@@ -23,5 +23,9 @@
         
         <input type="submit" value="save">
     </form>
+
+    <h1>Result</h1>
+    <p id="result"></p>
+    <h1 th:text="${messages}"></h1>
 </body>
 </html>

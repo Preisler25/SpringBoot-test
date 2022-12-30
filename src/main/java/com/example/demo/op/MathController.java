@@ -7,15 +7,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 
+
 @Controller
 public class MathController {
 
     @Autowired
     private OpRepository opRepository;
     @RequestMapping("/math")
-    public String welcome() {
-        return "temp/index";
-    }
+    public String welcome() {return "temp/index";}
 
     @RequestMapping(method = RequestMethod.POST, value="/math")
     public String doMath(@RequestBody String temp, HttpServletResponse response) {
