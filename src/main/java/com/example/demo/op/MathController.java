@@ -4,6 +4,7 @@ package com.example.demo.op;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -14,11 +15,10 @@ public class MathController {
     @Autowired
     private OpRepository opRepository;
     @RequestMapping("/math")
-    public String welcome() {return "temp/index";}
+    public String math() {return "math";}
 
     @RequestMapping(method = RequestMethod.POST, value="/math")
     public String doMath(@RequestBody String temp, HttpServletResponse response) {
-
         //converting data to string
         int num1 = Integer.parseInt(getData(temp, 0));
         int num2 = Integer.parseInt(getData(temp, 1));
