@@ -1,5 +1,5 @@
 $base--1-color: #ccd5ae;
-$base--1-color: #e9edc9;
+$base--2-color: #e9edc9;
 $base-color: #fefae0;
 $base-1-color: #faedcd;
 $base-2-color: #d4a373;
@@ -34,8 +34,8 @@ html{
     width: 70vw;
     margin-left: 15vw;
     border-radius: 10px;
-    box-shadow: 0 0 10px getShadow($base-1-color);
-    background-color: convertTOBG($base--1-color);
+    box-shadow: 0 0 10px getShadow($base--1-color);
+    background-color: convertTOBG($base-1-color);
 }
 
 #math_cont{
@@ -44,7 +44,7 @@ html{
     .cont{
         border: none;
         border-radius: 10px;
-        box-shadow: 0 0 10px getShadow($base-2-color);
+        box-shadow: 0 0 10px getShadow($base--2-color);
         width: 20vw;
         height: fit-content;
         background-color: convertTOBG($base-2-color);
