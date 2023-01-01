@@ -27,7 +27,7 @@ html{
 #math_s{
     margin-top: 10vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border: none;
@@ -37,8 +37,11 @@ html{
     border-radius: 10px;
     box-shadow: 0 0 10px getShadow($item-color);
     background-color: convertTOBG($item-color);
+}
 
-
+#math_cont{
+    display: flex;
+    flex-direction: row;
     .cont{
         border: none;
         border-radius: 10px;

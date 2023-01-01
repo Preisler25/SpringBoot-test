@@ -9,6 +9,7 @@
 <body>
     <div id="math_s">
         <h1>Math</h1>
+    <div id="math_cont">
     <div class="cont" id="calculator_cont">
         <div id="calculator">
         <form action="/math" method="POST">
@@ -34,6 +35,7 @@
         <h1>History</h1>
         <div id="history">${text}</div>
     </div>
+</div>
 </div>
 </body>
 </html>

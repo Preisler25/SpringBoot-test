@@ -11,7 +11,7 @@ html {
 #math_s {
   margin-top: 10vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border: none;
@@ -22,7 +22,12 @@ html {
   box-shadow: 0 0 10px rgba(250, 237, 205, 0.88);
   background-color: rgba(250, 237, 205, 0.7);
 }
-#math_s .cont {
+
+#math_cont {
+  display: flex;
+  flex-direction: row;
+}
+#math_cont .cont {
   border: none;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(212, 163, 115, 0.88);
@@ -32,19 +37,19 @@ html {
   height: fit-content;
   background-color: rgba(212, 163, 115, 0.7);
 }
-#math_s #calculator_cont {
+#math_cont #calculator_cont {
   margin-right: 5vw;
 }
-#math_s #history_cont {
+#math_cont #history_cont {
   margin-left: 5vw;
 }
-#math_s #history_cont #history div:nth-child(even) {
+#math_cont #history_cont #history div:nth-child(even) {
   background-color: #fefae0;
 }
-#math_s #history_cont #history div:nth-child(odd) {
+#math_cont #history_cont #history div:nth-child(odd) {
   background-color: #faedcd;
 }
-#math_s #history_cont #history div {
+#math_cont #history_cont #history div {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
