@@ -45,7 +45,7 @@ html {
 }
 #math_cont #history_cont #history {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
 }
 #math_cont #history_cont #history div:nth-child(even) {
