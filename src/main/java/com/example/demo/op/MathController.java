@@ -1,12 +1,11 @@
 package com.example.demo.op;
 
-
+import org.springframework.data.jpa.repository.JpaRepository;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
+import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
@@ -14,8 +13,12 @@ public class MathController {
 
     @Autowired
     private OpRepository opRepository;
-    @RequestMapping("/math")
-    public String math() {return "math";}
+    @RequestMapping(value = "/math", method = RequestMethod.GET)
+    public ModelAndView getIndexPage() {
+        ModelAndView mav = new ModelAndView("math");
+        mav.addObject("text", frmList(opRepository.findAll()));
+        return mav;
+    }
 
     @RequestMapping(method = RequestMethod.POST, value="/math")
     public String doMath(@RequestBody String temp, HttpServletResponse response) {
@@ -50,8 +53,33 @@ public class MathController {
                 break;
         }
     }
+
+    private int getResoult(Operations operations){
+        switch (operations.getOperator()) {
+            case "add":
+                return operations.getNum1() + operations.getNum2();
+            case "sub":
+                return operations.getNum1() - operations.getNum2();
+            case "mul":
+                return operations.getNum1() * operations.getNum2();
+            case "div":
+                return operations.getNum1() / operations.getNum2();
+        }
+        return 0;
+    }
     private String getData(String data, int id) {
         return data.split("&")[id].split("=")[1];
     }
 
+    public String printData(Operations operations) {
+        return "A számok: " + operations.getNum1() + " és " + operations.getNum2() + " " + operations.getOperator() + " művelettel" + " eredménye: " + getResoult(operations);
+    }
+
+    public String frmList(Iterable<Operations> operations) {
+        String list = "";
+        for (Operations operation : operations) {
+            list += "<div>" + printData(operation) + "</div>";
+        }
+        return list;
+    }
 }

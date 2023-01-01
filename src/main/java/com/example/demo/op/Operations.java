@@ -61,4 +61,13 @@ public class Operations{
     public void setOperator(String operator) {
         this.operator = operator;
     }
+
+    @Override
+    public String toString() {
+        return "Operations{" +
+                "num1=" + num1 +
+                ", num2=" + num2 +
+                ", operator='" + operator + '\'' +
+                '}';
+    }
 }
