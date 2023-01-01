@@ -17,6 +17,7 @@ html {
   border: none;
   height: 80vh;
   width: 70vw;
+  margin-left: 15vw;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(250, 237, 205, 0.88);
   background-color: rgba(250, 237, 205, 0.7);
@@ -37,6 +38,6 @@ html {
 #math_s #history_cont {
   margin-right: 5vh;
 }
-#math_s #history_cont #history:nth-child(even) {
+#math_s #history_cont #history div:nth-child(even) {
   background-color: #fefae0;
 }/*# sourceMappingURL=style.css.map */

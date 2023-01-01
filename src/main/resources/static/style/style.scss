@@ -33,6 +33,7 @@ html{
     border: none;
     height: 80vh;
     width: 70vw;
+    margin-left: 15vw;
     border-radius: 10px;
     box-shadow: 0 0 10px getShadow($item-color);
     background-color: convertTOBG($item-color);
@@ -53,8 +54,10 @@ html{
     #history_cont{
         margin-right: 5vh;
 
-        #history:nth-child(even){
-            background-color: $base-color;
+        #history{
+                div:nth-child(even){
+                    background-color: $base-color;
+            }
         }
     }
 }
