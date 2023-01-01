@@ -56,7 +56,7 @@ html{
     #calculator_cont{
         margin-right: 5vw;
     }
-    
+
     #history_cont{
         margin-left: 5vw;
 
@@ -64,8 +64,9 @@ html{
             display: flex;
             flex-direction: column;
             align-items: center;
-            border: 1px solid $black;
-            border-radius: 3px;
+            border: 1px solid getShadow($black);
+            border-radius: 5px;
+            box-shadow: 0 0 5px 2px getShadow($black);
 
             div:nth-child(even){
                 background-color: convertTOBG($base--1-color);
