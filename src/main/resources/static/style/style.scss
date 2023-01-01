@@ -1,8 +1,8 @@
-$h-font-color: #ccd5ae;
-$font-color: #e9edc9;
+$base--1-color: #ccd5ae;
+$base--1-color: #e9edc9;
 $base-color: #fefae0;
-$item-color: #faedcd;
-$H-item-color: #d4a373;
+$base-1-color: #faedcd;
+$base-2-color: #d4a373;
 
 @function getShadow($base) {
     $shadow: rgba($base, 0.88);
@@ -28,15 +28,14 @@ html{
     margin-top: 10vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     border: none;
     height: 80vh;
     width: 70vw;
     margin-left: 15vw;
     border-radius: 10px;
-    box-shadow: 0 0 10px getShadow($item-color);
-    background-color: convertTOBG($item-color);
+    box-shadow: 0 0 10px getShadow($base-1-color);
+    background-color: convertTOBG($base--1-color);
 }
 
 #math_cont{
@@ -45,10 +44,10 @@ html{
     .cont{
         border: none;
         border-radius: 10px;
-        box-shadow: 0 0 10px getShadow($H-item-color);
+        box-shadow: 0 0 10px getShadow($base-2-color);
         width: 20vw;
         height: fit-content;
-        background-color: convertTOBG($H-item-color);
+        background-color: convertTOBG($base-2-color);
     }
 
     #calculator_cont{
@@ -62,7 +61,7 @@ html{
                 background-color: $base-color;
             }
             div:nth-child(odd){
-                background-color: $item-color;
+                background-color: $base-1-color;
             }
 
             div{
