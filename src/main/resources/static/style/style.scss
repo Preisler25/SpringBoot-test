@@ -1,18 +1,47 @@
+$h-font-color: #ccd5ae;
+$font-color: #e9edc9;
+$base-color: #fefae0;
+$item-color: #faedcd;
+$H-item-color: #d4a373;
+
+@function getShadow($base) {
+    $shadow: rgba($base, 0.88);
+    @return $shadow;
+}
+
+@function convertTOBG($base) {
+    $BG: rgba($base, 0.7);
+    @return $BG;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html{
+    background-color: $base-color;
+}
+
 #math_s{
+    margin-top: 10vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px getShadow($item-color);
+    background-color: convertTOBG($item-color);
+
 
     .cont{
-        border: 5px solid black;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 0 10px getShadow($H-item-color);
         width: 40vw;
         height: 80vh;
+        background-color: convertTOBG($H-item-color);
     }
 }
