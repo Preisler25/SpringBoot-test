@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Preisler Math</title>
+    <mvc:resources mapping="/resources/**" location="/resources/static/" />
+    <link href="/style/style.css" rel="stylesheet"/>
 </head>
 <body>
     <h1>Math</h1>
