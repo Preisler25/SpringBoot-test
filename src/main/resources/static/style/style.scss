@@ -50,6 +50,7 @@ html{
         width: 20vw;
         height: fit-content;
         background-color: convertTOBG($base-2-color);
+        padding: 2vh;
     }
 
     #calculator_cont{
@@ -59,11 +60,16 @@ html{
         margin-left: 5vw;
 
         #history{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+
             div:nth-child(even){
-                background-color: $base-color;
+                background-color: convertTOBG($base--1-color);
             }
             div:nth-child(odd){
-                background-color: $base-1-color;
+                background-color: convertTOBG($base--2-color);
             }
 
             div{
