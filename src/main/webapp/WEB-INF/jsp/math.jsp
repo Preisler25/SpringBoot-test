@@ -24,7 +24,6 @@
         <input type="submit" value="save">
     </form>
 
-    <h2>Results</h2>
     <h1>Result</h1>
     <h1>${text}</h1>
 </body>
