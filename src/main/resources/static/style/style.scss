@@ -1,11 +1,11 @@
-$base--1-color: #ccd5ae;
-$base--2-color: #e9edc9;
+$base--2-color: #ccd5ae;
+$base--1-color: #e9edc9;
 $base-color: #fefae0;
 $base-1-color: #faedcd;
 $base-2-color: #d4a373;
 
 @function getShadow($base) {
-    $shadow: rgba($base, 0.88);
+    $shadow: rgba($base, 1);
     @return $shadow;
 }
 

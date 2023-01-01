@@ -18,7 +18,7 @@ html {
   width: 70vw;
   margin-left: 15vw;
   border-radius: 10px;
-  box-shadow: 0 0 10px 10px rgba(204, 213, 174, 0.88);
+  box-shadow: 0 0 10px 10px #e9edc9;
   background-color: rgba(250, 237, 205, 0.7);
 }
 
@@ -29,7 +29,7 @@ html {
 #math_cont .cont {
   border: none;
   border-radius: 10px;
-  box-shadow: 0 0 10px 10px rgba(233, 237, 201, 0.88);
+  box-shadow: 0 0 10px 10px #ccd5ae;
   width: 20vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;
