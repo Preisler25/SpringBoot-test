@@ -29,8 +29,8 @@
         </form>
     </div>
     <div class="cont">
-        <div>History</div>
-        <h1>${text}</h1>
+        <h1>History</h1>
+        <div>${text}</div>
     </div>
 </div>
 </body>
