@@ -39,7 +39,4 @@ html {
 }
 #math_s #history_cont #history:nth-child(even) {
   background-color: #fefae0;
-}
-#math_s #history_cont #history:nth-child(odd) {
-  background-color: #faedcd;
 }/*# sourceMappingURL=style.css.map */
