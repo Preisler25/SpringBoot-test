@@ -7,6 +7,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 @Controller
 public class MathController {
@@ -36,49 +39,30 @@ public class MathController {
         return "redirect:/math";
     }
 
-    private void save(Operations operations) {
-        opRepository.save(operations);
+    private void save(Operations operations) {opRepository.save(operations);}
+
+    private String printData(Operations operations){
         switch (operations.getOperator()) {
             case "add":
-                System.out.println("A Számok összege " + (operations.getNum1() + operations.getNum2()));
-                break;
+                return "A Számok összege " + (operations.getNum1() + operations.getNum2());
             case "sub":
-                System.out.println("A Számok különbsége " + (operations.getNum1() - operations.getNum2()));
-                break;
+                return "A Számok különbsége " + (operations.getNum1() - operations.getNum2());
             case "mul":
-                System.out.println("A Számok szorzata " + (operations.getNum1() * operations.getNum2()));
-                break;
+                return "A Számok szorzata " + (operations.getNum1() * operations.getNum2());
             case "div":
-                System.out.println("A Számok hányadosa " + (operations.getNum1()) / operations.getNum2());
-                break;
+                return "A Számok hányadosa " + (operations.getNum1() / operations.getNum2());
         }
+        return "0";
     }
-
-    private int getResoult(Operations operations){
-        switch (operations.getOperator()) {
-            case "add":
-                return operations.getNum1() + operations.getNum2();
-            case "sub":
-                return operations.getNum1() - operations.getNum2();
-            case "mul":
-                return operations.getNum1() * operations.getNum2();
-            case "div":
-                return operations.getNum1() / operations.getNum2();
-        }
-        return 0;
-    }
-    private String getData(String data, int id) {
-        return data.split("&")[id].split("=")[1];
-    }
-
-    public String printData(Operations operations) {
-        return "A számok: " + operations.getNum1() + " és " + operations.getNum2() + " " + operations.getOperator() + " művelettel" + " eredménye: " + getResoult(operations);
-    }
+    private String getData(String data, int id) {return data.split("&")[id].split("=")[1];}
 
     public String frmList(Iterable<Operations> operations) {
         String list = "";
-        for (Operations operation : operations) {
-            list += "<div>" + printData(operation) + "</div>";
+        List<Operations> opList = new ArrayList<>();
+        operations.forEach(opList::add);
+
+        for (int i = opList.size()-1; i >= 0; i--) {
+            list += "<div>" + printData(opList.get(i)) + "</div>";
         }
         return list;
     }
