@@ -15,6 +15,8 @@ html {
   justify-content: center;
   align-items: center;
   border: none;
+  height: 80vh;
+  width: 70vw;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(250, 237, 205, 0.88);
   background-color: rgba(250, 237, 205, 0.7);
@@ -23,7 +25,21 @@ html {
   border: none;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(212, 163, 115, 0.88);
-  width: 40vw;
-  height: 80vh;
+  width: 20vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: rgba(212, 163, 115, 0.7);
+}
+#math_s #calculator_cont {
+  margin-left: 5vh;
+}
+#math_s #history_cont {
+  margin-right: 5vh;
+}
+#math_s #history_cont #history:nth-child(even) {
+  background-color: #fefae0;
+}
+#math_s #history_cont #history:nth-child(odd) {
+  background-color: #faedcd;
 }/*# sourceMappingURL=style.css.map */

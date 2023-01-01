@@ -31,6 +31,8 @@ html{
     justify-content: center;
     align-items: center;
     border: none;
+    height: 80vh;
+    width: 70vw;
     border-radius: 10px;
     box-shadow: 0 0 10px getShadow($item-color);
     background-color: convertTOBG($item-color);
@@ -40,8 +42,22 @@ html{
         border: none;
         border-radius: 10px;
         box-shadow: 0 0 10px getShadow($H-item-color);
-        width: 40vw;
-        height: 80vh;
+        width: 20vw;
+        height: fit-content;
         background-color: convertTOBG($H-item-color);
+    }
+
+    #calculator_cont{
+        margin-left: 5vh;
+    }
+    #history_cont{
+        margin-right: 5vh;
+
+        #history:nth-child(even){
+            background-color: $base-color;
+        }
+        #history:nth-child(odd){
+            background-color: $item-color;
+        }
     }
 }

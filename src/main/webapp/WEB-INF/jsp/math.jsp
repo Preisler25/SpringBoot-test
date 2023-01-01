@@ -8,8 +8,9 @@
 </head>
 <body>
     <div id="math_s">
-    <div class="cont">
+    <div class="cont" id="calculator_cont">
         <h1>Math</h1>
+        <div id="calculator">
         <form action="/math" method="POST">
             <label for="num1"></label>
             <input id="num1" name="num1" type="text">
@@ -28,9 +29,10 @@
             <input type="submit" value="save">
         </form>
     </div>
-    <div class="cont">
+    </div>
+    <div class="cont" id="history_cont">
         <h1>History</h1>
-        <div>${text}</div>
+        <div id="history">${text}</div>
     </div>
 </div>
 </body>
