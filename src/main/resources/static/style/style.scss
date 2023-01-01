@@ -3,9 +3,11 @@ $base--1-color: #e9edc9;
 $base-color: #fefae0;
 $base-1-color: #faedcd;
 $base-2-color: #d4a373;
+$black: #000000;
+$white: #ffffff;
 
 @function getShadow($base) {
-    $shadow: rgba($base, 1);
+    $shadow: rgba($base, 0.88);
     @return $shadow;
 }
 
@@ -34,7 +36,7 @@ html{
     width: 70vw;
     margin-left: 15vw;
     border-radius: 10px;
-    box-shadow: 0 0 10px 10px getShadow($base--1-color);
+    box-shadow: 0 0 10px 5px getShadow($black);
     background-color: convertTOBG($base-1-color);
 }
 
@@ -44,7 +46,7 @@ html{
     .cont{
         border: none;
         border-radius: 10px;
-        box-shadow: 0 0 10px 10px getShadow($base--2-color);
+        box-shadow: 0 0 10px 5px getShadow($black);
         width: 20vw;
         height: fit-content;
         background-color: convertTOBG($base-2-color);
