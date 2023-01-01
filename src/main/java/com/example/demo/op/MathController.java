@@ -61,7 +61,7 @@ public class MathController {
         List<Operations> opList = new ArrayList<>();
         operations.forEach(opList::add);
 
-        for (int i = opList.size()-1; i >= 0; i--) {
+        for (int i = opList.size()-1; i >= 0 && opList.size()-11 < i; i--) {
             list += "<div>" + printData(opList.get(i)) + "</div>";
         }
         return list;
