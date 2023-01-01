@@ -8,8 +8,8 @@
 </head>
 <body>
     <div id="math_s">
-    <div class="cont" id="calculator_cont">
         <h1>Math</h1>
+    <div class="cont" id="calculator_cont">
         <div id="calculator">
         <form action="/math" method="POST">
             <label for="num1"></label>

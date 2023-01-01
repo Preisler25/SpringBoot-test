@@ -33,11 +33,20 @@ html {
   background-color: rgba(212, 163, 115, 0.7);
 }
 #math_s #calculator_cont {
-  margin-left: 5vh;
+  margin-right: 5vw;
 }
 #math_s #history_cont {
-  margin-right: 5vh;
+  margin-left: 5vw;
 }
 #math_s #history_cont #history div:nth-child(even) {
   background-color: #fefae0;
+}
+#math_s #history_cont #history div:nth-child(odd) {
+  background-color: #faedcd;
+}
+#math_s #history_cont #history div {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
