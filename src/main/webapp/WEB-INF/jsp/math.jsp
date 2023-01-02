@@ -12,14 +12,15 @@
     <div id="math_cont">
     <div class="cont" id="calculator_cont">
         <div id="calculator">
+        <h1>Calculator</h1>
         <form action="/math" method="POST">
-            <label for="num1"></label>
-            <input id="num1" name="num1" type="text">
+            <label for="num1">Number1</label>
+            <input id="num1" name="num1" placeholder="XXXXX" type="text">
     
-            <label for="num2"></label>
-            <input id="num2" name="num2" type="text">
+            <label for="num2">Number2</label>
+            <input id="num2" name="num2" placeholder="XXXXX" type="text">
     
-            <label for="op"></label>
+            <label for="op">Operator</label>
             <select name="op" id="op">
                 <option value="add">+</option>
                 <option value="sub">-</option>
@@ -27,7 +28,7 @@
                 <option value="div">÷</option>
             </select>
     
-            <input type="submit" value="save">
+            <input id="sbutt" type="submit" value="Calculate">
         </form>
     </div>
     </div>

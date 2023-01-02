@@ -40,6 +40,34 @@ html {
 #math_cont #calculator_cont {
   margin-right: 5vw;
 }
+#math_cont #calculator_cont #calculator h1 {
+  text-align: center;
+  color: #000000;
+}
+#math_cont #calculator_cont #calculator form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2vh;
+  border: 1px solid rgba(0, 0, 0, 0.88);
+  border-radius: 5px;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.88);
+  background-color: rgba(254, 250, 224, 0.7);
+  padding: 2vh;
+}
+#math_cont #calculator_cont #calculator form input {
+  border: none;
+  background-color: #e9edc9;
+}
+#math_cont #calculator_cont #calculator form select {
+  border: none;
+  background-color: #e9edc9;
+}
+#math_cont #calculator_cont #calculator form #sbutt {
+  padding: 1vh;
+  border: none;
+  background-color: #e9edc9;
+}
 #math_cont #history_cont {
   margin-left: 5vw;
 }

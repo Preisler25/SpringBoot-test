@@ -55,6 +55,39 @@ html{
 
     #calculator_cont{
         margin-right: 5vw;
+        #calculator{
+            h1{
+                text-align: center;
+                color: $black;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 2vh;
+                border: 1px solid getShadow($black);
+                border-radius: 5px;
+                box-shadow: 0 0 5px 1px getShadow($black);
+                background-color: convertTOBG($base-color);
+                padding: 2vh;
+
+                input{
+                    border: none;
+                    background-color: $base--1-color;
+                }
+                
+                select{
+                    border: none;
+                    background-color: $base--1-color;
+                }
+
+                #sbutt{
+                    padding: 1vh;
+                    border: none;
+                    background-color: $base--1-color;
+                }
+            }
+        }
     }
 
     #history_cont{
