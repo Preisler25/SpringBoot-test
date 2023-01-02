@@ -74,7 +74,7 @@ html{
 
                 input{
                     border: none;
-                    background-color: $base--2-color;
+                    background-color: $base--1-color;
                     padding: 1vh;
                     margin-bottom: 2vh;
                     border-bottom: 1px dashed getShadow($black);
@@ -82,16 +82,22 @@ html{
 
                 select{
                     border: none;
-                    background-color: $base--2-color;
+                    background-color: $base--1-color;
                     padding: 1vh;
+                    border-radius: 5px;
                 }
 
                 #sbutt{
                     border: none;
-                    background-color: $base--2-color;
+                    background-color: $base--1-color;
                     border: 1px solid getShadow($black);
                     margin-top: 1vh;
                     border-radius: 5px;
+                    transition: 0.3s;
+                }
+
+                #sbutt:hover{
+                    background-color: $base--2-color;
                 }
             }
         }
