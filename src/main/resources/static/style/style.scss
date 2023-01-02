@@ -64,9 +64,10 @@ html{
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-top: 1vh;
             border: 1px solid getShadow($black);
             border-radius: 5px;
-            box-shadow: 0 0 3px 3px getShadow($black);
+            box-shadow: 0 0 5px 1px getShadow($black);
 
             div:nth-child(even){
                 background-color: convertTOBG($base--1-color);
