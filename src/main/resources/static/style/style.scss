@@ -38,6 +38,11 @@ html{
     border-radius: 10px;
     box-shadow: 0 0 10px 2px getShadow($black);
     background-color: convertTOBG($base-1-color);
+
+    h1{
+        color: $black;
+        margin-bottom: 7vh;
+    }
 }
 
 #math_cont{
