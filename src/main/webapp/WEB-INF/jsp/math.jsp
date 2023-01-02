@@ -8,7 +8,7 @@
 </head>
 <body>
     <div id="math_s">
-        <h1>Math</h1>
+        <h1 id="Math">Math</h1>
     <div id="math_cont">
     <div class="cont" id="calculator_cont">
         <div id="calculator">
