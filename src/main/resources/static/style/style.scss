@@ -60,6 +60,11 @@ html{
     #history_cont{
         margin-left: 5vw;
 
+        h1{
+            text-align: center;
+            color: $base--2-color;
+        }
+
         #history{
             display: flex;
             flex-direction: column;
