@@ -70,21 +70,28 @@ html{
                 box-shadow: 0 0 5px 1px getShadow($black);
                 background-color: convertTOBG($base-color);
                 padding: 2vh;
+                font-size: larger;
 
                 input{
                     border: none;
                     background-color: $base--1-color;
+                    padding: 2vh;
+                    margin: 1vh;
+                    border-bottom: 1px dashed getShadow($black);
                 }
-                
+
                 select{
                     border: none;
                     background-color: $base--1-color;
+                    padding: 2vh;
                 }
 
                 #sbutt{
                     padding: 1vh;
                     border: none;
                     background-color: $base--1-color;
+                    border: 1px solid getShadow($black);
+                    margin-bottom: 1vh;
                 }
             }
         }
