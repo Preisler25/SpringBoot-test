@@ -58,21 +58,22 @@ html {
 }
 #math_cont #calculator_cont #calculator form input {
   border: none;
-  background-color: #e9edc9;
+  background-color: #ccd5ae;
   padding: 1vh;
   margin-bottom: 2vh;
   border-bottom: 1px dashed rgba(0, 0, 0, 0.88);
 }
 #math_cont #calculator_cont #calculator form select {
   border: none;
-  background-color: #e9edc9;
+  background-color: #ccd5ae;
   padding: 1vh;
 }
 #math_cont #calculator_cont #calculator form #sbutt {
   border: none;
-  background-color: #e9edc9;
+  background-color: #ccd5ae;
   border: 1px solid rgba(0, 0, 0, 0.88);
   margin-top: 1vh;
+  border-radius: 5px;
 }
 #math_cont #history_cont {
   margin-left: 5vw;
