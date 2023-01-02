@@ -44,13 +44,13 @@ public class MathController {
     private String printData(Operations operations){
         switch (operations.getOperator()) {
             case "add":
-                return "A Számok összege " + (operations.getNum1() + operations.getNum2());
+                return operations.getNum1() + " + " + operations.getNum2() +" = "+ (operations.getNum1() + operations.getNum2());
             case "sub":
-                return "A Számok különbsége " + (operations.getNum1() - operations.getNum2());
+                return operations.getNum1() + " - " + operations.getNum2() +" = "+ (operations.getNum1() - operations.getNum2());
             case "mul":
-                return "A Számok szorzata " + (operations.getNum1() * operations.getNum2());
+                return operations.getNum1() + " * " + operations.getNum2() +" = "+ (operations.getNum1() * operations.getNum2());
             case "div":
-                return "A Számok hányadosa " + (operations.getNum1() / operations.getNum2());
+                return operations.getNum1() + " / " + operations.getNum2() +" = "+ (operations.getNum1() / operations.getNum2());
         }
         return "0";
     }
